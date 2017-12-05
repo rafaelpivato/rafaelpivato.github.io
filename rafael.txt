@@ -1,0 +1,25 @@
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from rafaelpivato import *
+>>> print about, '\n'
+{'Name': 'Rafael Pivato', 'Hobby': 'Woodworking'}
+
+>>> print skills[:3], '\n'
+['Python', 'ReactJS', 'NoSQL']
+
+>>> print interests[:3], '\n'
+['Web', 'DevOps', 'Startups']
+
+>>> for current in positions:
+...     print current[:2]
+...     print '\t', current[2]
+...     print '\n'
+...
+('KlioHealth', 'Lead Developer')
+	http://www.kliohealth.com/
+
+('SeniorGrowth', 'Lead Developer')
+	http://www.seniorgrowth.com/
+
+>>> exit()
