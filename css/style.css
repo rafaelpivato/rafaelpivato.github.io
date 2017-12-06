@@ -6,7 +6,7 @@ body { display: flex; font-family: 'Share Tech Mono', monospace; position: relat
 
 .wrapper { display: flex; flex-grow: 1; align-content: stretch; }
 .wrapper:before {
-    background-image: url(fire.png);
+    background-image: url(../img/fire.png);
     background-position: center center;    
     background-repeat:   no-repeat;
     background-size:     cover;
@@ -29,7 +29,7 @@ body { display: flex; font-family: 'Share Tech Mono', monospace; position: relat
 .card h1 { font-size: 24px; }
 .card h2, .card h2 a, .card h2 a:visited { font-size: 19px; color: #eaa; text-decoration: none; }
 .card .avatar {
-    background-image: url(avatar.jpg);
+    background-image: url(../img/avatar.jpg);
     background-size: cover;
     border-radius: 50%;
     border: 10px solid white;
@@ -48,6 +48,7 @@ body { display: flex; font-family: 'Share Tech Mono', monospace; position: relat
     box-shadow: 0px -2px 15px 1px #331f06;
     color: #d0d0d0;
     font-size: 12px;
+    height: 35px;
     left: 0;
     opacity: 0.8;
     position: absolute;
@@ -56,6 +57,7 @@ body { display: flex; font-family: 'Share Tech Mono', monospace; position: relat
 }
 .footer p { margin: 2px; text-align: center; }
 .footer a, .footer a:visited { color: #606060; }
+.footer .social-bar { font-size: 20px; margin: 0; position: relative; top: 7px; right: 10px; float: right; letter-spacing: -3px; }
 
 .highlight { flex-grow: 1; background-color: #000; font-size: 16px; overflow: hidden; text-align: center; opacity: 0.8; }
 .highlight pre { margin: 20px; display: inline-block; text-align: left; }
@@ -70,6 +72,7 @@ body { display: flex; font-family: 'Share Tech Mono', monospace; position: relat
     .highlight pre { margin: 5px; }
     .highlight { font-size: 13px; }
     .highlight .go.special a { font-weight: bold; }
+    .footer .social-bar { display: none }
 }
 
 .highlight .hll { background-color: #404040 }
