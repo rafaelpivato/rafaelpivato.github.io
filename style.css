@@ -25,8 +25,13 @@ body { display: flex; }
 .highlight { font-size: 16px; background-color: #000; overflow: hidden; padding: 20px 10px; opacity: 0.8; text-align: center; }
 .highlight pre { margin: 0; display: inline-block; text-align: left; }
 
+.highlight .go.special { color: #eeee00; } /* Generic.Output */
+.highlight .go.special a, .highlight .go.special a:visited { color: #eeee00; text-decoration: none; }
+.highlight .go.special a:hover { color: #eeee00; font-weight: bold; }
+
 @media screen and (min-width: 0px) and (max-width: 576px) {
     .highlight { font-size: 13px; padding: 5px; }
+    .highlight .go.special a { font-weight: bold; }
 }
 
 .highlight .hll { background-color: #404040 }
@@ -52,9 +57,6 @@ body { display: flex; }
 .highlight .gh { color: #ffffff; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #589819 } /* Generic.Inserted */
 .highlight .go { color: #cccccc } /* Generic.Output */
-
-.highlight .go.special { color: #eeee00 } /* Generic.Output */
-
 .highlight .gp { color: #aaaaaa } /* Generic.Prompt */
 .highlight .gs { color: #d0d0d0; font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #ffffff; text-decoration: underline } /* Generic.Subheading */
