@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?Share+Tech+Mono');
 
-html, body { margin: 0; height: 100%; min-height: 100%; padding: 0; }
-body { display: flex; }
+* { margin: 0; padding; 0; box-sizing: border-box; }
+html, body { height: 100%; min-height: 100%; }
+body { display: flex; font-family: 'Share Tech Mono', monospace; }
 
-.wrapper { display: flex; flex-grow: 1; align-content: stretch; margin: 0; filter: grayscale(0%); }
+.wrapper { display: flex; flex-grow: 1; align-content: stretch; }
 .wrapper:before {
     background-image: url(fire.png);
     background-position: center center;    
@@ -19,18 +21,39 @@ body { display: flex; }
     width: 100%;
     z-index: -1;
 }
-.left-column, .right-column { flex-grow: 3; flex-basis: 30% }
-.middle-column { flex-shrink: 0; flex-grow: 1; }
 
-.highlight { font-size: 16px; background-color: #000; overflow: hidden; padding: 20px 10px; opacity: 0.8; text-align: center; }
-.highlight pre { margin: 0; display: inline-block; text-align: left; }
+.left-column, .right-column { flex-grow: 3; flex-basis: 30% }
+.middle-column { flex-shrink: 0; flex-grow: 1; display: flex; flex-direction: column; }
+
+.card { background-color: white; opacity: 1; flex-grow: 0; height: 100px; padding: 20px; text-align: left; position: relative; }
+.card h1 { font-size: 24px; }
+.card h2 { font-size: 19px; color: #eaa; }
+.card .avatar {
+    background-image: url(avatar.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px solid white;
+    float: right;
+    height: 120px;
+    right: -30px;
+    position: absolute;
+    top: -10px;
+    width: 120px;
+    z-index: 1;
+}
+
+.highlight { flex-grow: 1; background-color: #000; font-size: 16px; overflow: hidden; text-align: center; opacity: 0.8; }
+.highlight pre { margin: 20px; display: inline-block; text-align: left; }
 
 .highlight .go.special { color: #eeee00; } /* Generic.Output */
 .highlight .go.special a, .highlight .go.special a:visited { color: #eeee00; text-decoration: none; }
 .highlight .go.special a:hover { color: #eeee00; font-weight: bold; }
 
 @media screen and (min-width: 0px) and (max-width: 576px) {
-    .highlight { font-size: 13px; padding: 5px; }
+    .card h1 { font-size: 18px; }
+    .card h2 { font-size: 15px; }
+    .highlight pre { margin: 5px; }
+    .highlight { font-size: 13px; }
     .highlight .go.special a { font-weight: bold; }
 }
 
