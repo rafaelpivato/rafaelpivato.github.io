@@ -1,11 +1,8 @@
 
-body {
-    filter: grayscale(70%);
-    margin: 0;
-    padding: 0;
-}
+html, body { margin: 0; height: 100%; min-height: 100%; padding: 0; }
+body { display: flex; }
 
-.wrapper { margin: 0; width: 100%; height: 100%; }
+.wrapper { display: flex; flex-grow: 1; align-content: stretch; margin: 0; filter: grayscale(0%); }
 .wrapper:before {
     background-image: url(fire.png);
     background-position: center center;    
@@ -14,7 +11,7 @@ body {
     background-color:    black;
     content: "";
     display: block;
-    filter: brightness(0.17);
+    filter: brightness(0.77);
     height: 100%;
     left: 0;
     position: fixed;
@@ -22,9 +19,15 @@ body {
     width: 100%;
     z-index: -1;
 }
+.left-column, .right-column { flex-grow: 3; flex-basis: 30% }
+.middle-column { flex-shrink: 0; flex-grow: 1; }
 
-.highlight { font-size: 16px; overflow: hidden; padding: 20px; margin: auto; text-align:center; opacity: 0.8; }
+.highlight { font-size: 16px; background-color: #000; overflow: hidden; padding: 20px 10px; opacity: 0.8; text-align: center; }
 .highlight pre { margin: 0; display: inline-block; text-align: left; }
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .highlight { font-size: 13px; padding: 5px; }
+}
 
 .highlight .hll { background-color: #404040 }
 .highlight .c { color: #999999; font-style: italic } /* Comment */
